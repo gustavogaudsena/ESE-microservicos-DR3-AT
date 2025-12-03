@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS loan;
+
+CREATE TABLE IF NOT EXISTS loan (
+    id SERIAL PRIMARY KEY,
+    user_id UUID NOT NULL,
+    book_id UUID NOT NULL,
+    lend_at TIMESTAMP NOT NULL,
+    due_date TIMESTAMP NOT NULL,
+    status VARCHAR(20) NOT NULL
+);

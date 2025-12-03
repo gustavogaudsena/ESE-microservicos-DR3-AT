@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: library
+  r2dbc:
+    url: r2dbc:h2:mem:///libraryDb
+    username: sa
+    password:
+  flyway:
+    enabled: false
+
+credit:
+  service:
+    url: http://localhost:8082

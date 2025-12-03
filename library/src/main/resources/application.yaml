@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME:library}
+  r2dbc:
+    url: ${SPRING_R2DBC_URL:r2dbc:h2:mem:///libraryDb}
+    username: ${SPRING_R2DBC_USERNAME:sa}
+    password: ${SPRING_R2DBC_PASSWORD:}
+  flyway:
+    enabled: ${SPRING_FLYWAY_ENABLED:false}
+    url: ${SPRING_FLYWAY_URL:}
+    user: ${SPRING_FLYWAY_USER:}
+    password: ${SPRING_FLYWAY_PASSWORD:}
+    baseline-on-migrate: ${SPRING_FLYWAY_BASELINE_ON_MIGRATE:false}
+
+server:
+  port: ${SERVER_PORT:8080}
+
+credit:
+  service:
+    url: ${CREDIT_SERVICE_URL:http://localhost:8082}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always

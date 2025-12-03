@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: library-config
+  namespace: dr3at
+data:
+  SPRING_APPLICATION_NAME: "library"
+  SPRING_R2DBC_URL: "r2dbc:postgresql://postgres-service:5432/appdb"
+  SPRING_R2DBC_USERNAME: "appuser"
+  SPRING_FLYWAY_URL: "jdbc:postgresql://postgres-service:5432/appdb"
+  SPRING_FLYWAY_USER: "appuser"
+  SPRING_FLYWAY_ENABLED: "true"
+  SPRING_FLYWAY_BASELINE_ON_MIGRATE: "true"
+  SERVER_PORT: "8080"
+  CREDIT_SERVICE_URL: "http://usercredits-service:8082"
